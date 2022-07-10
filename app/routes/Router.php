@@ -53,16 +53,20 @@ class Router
       $uri = Uri::get('path');
 
       if (!isset($routes[$request])) {
-        throw new Exception("A rota não existe");
+        throw new Exception("Route does not exist.");
       }
 
       if (!array_key_exists($uri, $routes[$request])) {
-        throw new Exception("A rota não existe");
+        throw new Exception("Route does not exist.");
       }
 
       $router = $routes[$request][$uri];
+      
+      if (!is_callable($router)) {
+        throw new Exception("Route {$uri} is not callable");
+      }
+      
       $router();
-
     } catch (Exception $e) {
       echo $e->getMessage();
     }

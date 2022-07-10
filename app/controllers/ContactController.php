@@ -2,14 +2,14 @@
 
 namespace app\controllers;
 
-class ContactController
+class ContactController extends Controller
 {
   public function index()
   {
-    echo "index contact";
+    $this->view('contact');
   }
 
-  public function store()
+  public function store($request)
   {
     echo "store contact";
   }

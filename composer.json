@@ -5,5 +5,7 @@
             "app\\": "app/"
         }
     },
-    "require": {}
+    "require": {
+        "league/plates": "^3.4"
+    }
 }
