@@ -1,0 +1,9 @@
+{
+    "name": "chris/oop-routing-system",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "require": {}
+}
